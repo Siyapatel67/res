@@ -23,14 +23,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 500px;
+  width: 100%;
   border-bottom: 2px solid #d1d5db;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  gap: 20px;
 }
 
 .name-block {
   text-align: left;
+  flex: 1;
 }
 
 .name-block h1 {
@@ -48,6 +50,7 @@ body {
   text-align: right;
   font-size: 0.9rem;
   color: #374151;
+  flex: 1;
 }
 
 .content {
@@ -119,14 +122,15 @@ ul {
 }
 
 .headshot {
-  position: absolute;
-  top: 60px;
-  right: 125px
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .headshot img {
-  width: 150px;
-  height: 150px;
+  width: min(150px, 25vw);
+  height: min(150px, 25vw);
   object-fit: cover;
   border-radius: 50%;
 }
